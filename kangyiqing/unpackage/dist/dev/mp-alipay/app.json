@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/mine/login/login",
+    "pages/home/index",
+    "pages/mine/area/search",
+    "pages/mine/area/access",
+    "pages/hbuemap/index",
+    "pages/healthy/index",
+    "pages/home/data/data",
+    "pages/mine/changepwd",
+    "pages/mine/login/register",
+    "pages/mine/login/agreement",
+    "pages/mine/login/forget",
+    "pages/mine/area/index",
+    "pages/home/myqrcode/qrcode",
+    "pages/home/yaoyan/yaoyan",
+    "pages/home/message/message",
+    "pages/mine/info",
+    "pages/mine/jubao",
+    "pages/mine/pass",
+    "pages/mine/tpass/psqrcode",
+    "pages/mine/tpass/phealthy",
+    "pages/home/healthynews/healthynews",
+    "pages/home/detail",
+    "pages/home/message/messagedetail",
+    "pages/home/news/news",
+    "pages/mine/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "defaultTitle": "湖经抗疫防控",
+    "titleBarColor": "#007AFF",
+    "backgroundColor": "#FFFFFF"
+  },
+  "tabBar": {
+    "textColor": "#7a7e83",
+    "selectedColor": "#0faeff",
+    "backgroundColor": "#ffffff",
+    "items": [
+      {
+        "pagePath": "pages/home/index",
+        "name": "首页",
+        "icon": "static/icons/bar/home.png",
+        "activeIcon": "static/icons/bar/homeHL.png"
+      },
+      {
+        "pagePath": "pages/hbuemap/index",
+        "name": "疫情地图",
+        "icon": "static/icons/bar/map.png",
+        "activeIcon": "static/icons/bar/mapHL.png"
+      },
+      {
+        "pagePath": "pages/healthy/index",
+        "name": "健康打卡",
+        "icon": "static/icons/bar/healthy.png",
+        "activeIcon": "static/icons/bar/healthyHL.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "name": "我的",
+        "icon": "static/icons/bar/mine.png",
+        "activeIcon": "static/icons/bar/mineHL.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/hbuemap/index",
+    "pages/healthy/index",
+    "pages/area/index",
+    "pages/home/myqrcode/qrcode",
+    "pages/home/yaoyan/yaoyan",
+    "pages/home/message/message",
+    "pages/mine/info",
+    "pages/mine/jubao",
+    "pages/home/healthynews/healthynews",
+    "pages/home/detail",
+    "pages/home/message/messagedetail",
+    "pages/home/news/news",
+    "pages/mine/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "湖经抗疫防控",
+    "navigationBarBackgroundColor": "#007AFF",
+    "backgroundColor": "#FFFFFF"
+  },
+  "tabBar": {
+    "color": "#7a7e83",
+    "selectedColor": "#0faeff",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "static/icons/bar/home.png",
+        "selectedIconPath": "static/icons/bar/homeHL.png"
+      },
+      {
+        "pagePath": "pages/hbuemap/index",
+        "text": "疫情地图",
+        "iconPath": "static/icons/bar/map.png",
+        "selectedIconPath": "static/icons/bar/mapHL.png"
+      },
+      {
+        "pagePath": "pages/healthy/index",
+        "text": "健康打卡",
+        "iconPath": "static/icons/bar/healthy.png",
+        "selectedIconPath": "static/icons/bar/healthyHL.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "static/icons/bar/mine.png",
+        "selectedIconPath": "static/icons/bar/mineHL.png"
+      }
+    ]
+  },
+  "permission": {},
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

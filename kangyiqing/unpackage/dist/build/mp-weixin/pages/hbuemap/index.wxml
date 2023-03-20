@@ -1,0 +1,1 @@
+<view class="content"><hch-position vue-id="40babfcc-1" vpersonData="{{vpersonData}}" markers="{{markers}}" bind:__l="__l"></hch-position></view>

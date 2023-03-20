@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "疫情地图",
+  "usingComponents": {
+    "hch-position": "/wxcomponents/hch-position/hch-position"
+  }
+}

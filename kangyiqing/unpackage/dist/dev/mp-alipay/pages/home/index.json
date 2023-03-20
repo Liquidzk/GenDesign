@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "经安通",
+  "usingComponents": {
+    "uni-swiper-dot": "/components/uni-swiper-dot/uni-swiper-dot"
+  }
+}

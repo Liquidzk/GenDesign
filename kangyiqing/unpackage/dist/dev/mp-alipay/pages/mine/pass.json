@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "申请临时通行证",
+  "usingComponents": {
+    "uni-card": "/components/uni-card/uni-card"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "临时通行证二维码",
+  "usingComponents": {
+    "tki-qrcode": "/components/tki-qrcode/tki-qrcode"
+  }
+}

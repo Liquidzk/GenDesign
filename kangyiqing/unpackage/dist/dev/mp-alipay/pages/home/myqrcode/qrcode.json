@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "二维码",
+  "usingComponents": {
+    "tki-qrcode": "/components/tki-qrcode/tki-qrcode"
+  }
+}

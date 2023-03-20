@@ -1,0 +1,28 @@
+
+cover-image {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 300rpx;
+	width: 100%;
+}
+.main{
+	position: absolute;
+	top: 0;width: 100%;
+}
+.head_box{
+	margin-left: 20rpx;
+	width: 700rpx;
+	height: 100rpx;
+	background-color: #ffffff;
+	border-radius: 15rpx;
+}
+.btn-box{
+	width: 310rpx;
+	height: 150rpx;
+	border-radius: 20rpx;
+}
+.scroll{
+	height: 700rpx;
+}
+

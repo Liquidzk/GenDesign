@@ -1,0 +1,209 @@
+{
+	"pages": [	
+        {
+			"path": "pages/mine/login/login",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		},
+        {
+		"path": "pages/home/index",
+		"style": {
+			"navigationBarTitleText": "经安通"
+		}
+	},{
+            "path" : "pages/mine/area/search",
+            "style" : {
+				"navigationBarTitleText":"用户查找"
+			}
+        }
+        ,{
+		"path": "pages/mine/area/access",
+		"style": {
+			"navigationBarTitleText": "行踪记录"
+		}
+	},
+	{
+		"path": "pages/hbuemap/index",
+		"style": {
+			"navigationBarTitleText": "疫情地图"
+		},
+		"permission": {
+		    "scope.userLocation": {
+		      "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+		    }
+		  }
+
+	},
+	{
+		"path": "pages/healthy/index",
+		"style": {
+			"navigationBarTitleText": "健康打卡"
+		}
+	},
+	{
+		"path": "pages/home/data/data",
+		"style": {
+			"navigationBarTitleText": "疫情跟踪"
+		}
+	},{
+		"path": "pages/mine/changepwd",
+		"style": {
+			"navigationBarTitleText": "修改密码"
+		}
+	},
+	{
+		"path": "pages/mine/login/register",
+		"style": {
+			"navigationBarTitleText": "注册"
+		}
+	},
+    {
+    	"path": "pages/mine/login/agreement",
+    	"style": {
+    		"navigationBarTitleText": "协议"
+    	}
+    },
+    {
+    	"path": "pages/mine/login/forget",
+    	"style": {
+    		"navigationBarTitleText": "忘记密码"
+    	}
+    },
+	{
+		"path": "pages/mine/area/index",
+		"style": {
+			"navigationBarTitleText": "区域管理"
+		}
+	},
+	{
+		"path": "pages/home/myqrcode/qrcode",
+		"style": {
+			"navigationBarTitleText": "二维码"
+		}
+	},
+	{
+		"path": "pages/home/yaoyan/yaoyan",
+		"style": {
+			"navigationBarTitleText": "谣言"
+		}
+	},{
+		"path": "pages/home/message/message",
+		"style": {
+			"navigationBarTitleText": "通知"
+		}
+	},{
+		"path": "pages/mine/info",
+		"style": {
+			"navigationBarTitleText": "个人信息"
+		}
+	},
+	{
+		"path": "pages/mine/jubao",
+		"style": {
+			"navigationBarTitleText": "匿名举报"
+		}
+	},
+    {
+    	"path": "pages/mine/pass",
+    	"style": {
+    		"navigationBarTitleText": "申请临时通行证"
+    	}
+    },
+    {
+    	"path": "pages/mine/tpass/psqrcode",
+    	"style": {
+    		"navigationBarTitleText": "临时通行证二维码"
+    	}
+    },
+    {
+    	"path": "pages/mine/tpass/phealthy",
+    	"style": {
+    		"navigationBarTitleText": "填写健康信息"
+    	}
+    },
+	{
+		"path": "pages/home/healthynews/healthynews",
+		"style": {
+			"navigationBarTitleText": "抗疫贴士",
+			"enablePullDownRefresh": true
+		}
+	},
+	{
+	    "path" : "pages/home/detail",
+	    "style": {
+	        "navigationBarTitleText": "详情",
+	        "app-plus": {
+	            "titleNView": {
+	                "type": "transparent"
+	            }
+	        }
+	    }
+	},{
+	    "path" : "pages/home/message/messagedetail",
+	    "style": {
+	        "navigationBarTitleText": "通知详情",
+	        "app-plus": {
+	            "titleNView": {
+	                "type": "transparent"
+	            }
+	        }
+	    }
+	},
+	{
+		"path": "pages/home/news/news",
+		"style": {
+			"navigationBarTitleText": "新闻",
+			"enablePullDownRefresh": true
+		}
+	},
+	{
+		"path": "pages/mine/index",
+		"style": {
+			"navigationBarTitleText": "我的"
+		}
+	}
+	],
+	"tabBar": {
+		"color": "#7a7e83",
+		"selectedColor": "#0faeff",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/home/index",
+			"text": "首页",
+			"iconPath": "static/icons/bar/home.png",
+			"selectedIconPath": "static/icons/bar/homeHL.png"
+		},{
+			"pagePath": "pages/hbuemap/index",
+			"text": "疫情地图",
+			"iconPath": "static/icons/bar/map.png",
+			"selectedIconPath": "static/icons/bar/mapHL.png"
+		},{
+			"pagePath": "pages/healthy/index",
+			"text": "健康打卡",
+			"iconPath": "static/icons/bar/healthy.png",
+			"selectedIconPath": "static/icons/bar/healthyHL.png"
+		},{
+			"pagePath": "pages/mine/index",
+			"text": "我的",
+			"iconPath": "static/icons/bar/mine.png",
+			"selectedIconPath": "static/icons/bar/mineHL.png"
+		}]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "湖经抗疫防控",
+		"navigationBarBackgroundColor": "#007AFF",
+		"backgroundColor": "#FFFFFF"
+	},
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	}
+}
