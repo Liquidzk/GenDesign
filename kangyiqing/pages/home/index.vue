@@ -22,13 +22,13 @@
 				<view class="icon">
 					<image mode="aspectFit" src="../../static/icons/index/qrcode.png"></image>
 				</view>
-				<view class="name">居安通行证</view>
+				<view class="name">场馆通行证</view>
 			</view>
 			<view class="item" @click="goto('/pages/home/data/data')">
 				<view class="icon">
 					<image mode="aspectFit" src="../../static/icons/index/wenduji2.png"></image>
 				</view>
-				<view class="name">疫情数据</view>
+				<view class="name">场馆数据</view>
 			</view>
 		</view>
 
@@ -37,28 +37,28 @@
 				<view class="icon">
 					<image mode="aspectFit" src="../../static/icons/index/dianhua.png"></image>
 				</view>
-				<view class="name">新闻信息</view>
+				<view class="name">赛事信息</view>
 			</view>
 
 			<view class="option" @click="goto('/pages/home/message/message')">
 				<view class="icon">
 					<image mode="aspectFit" src="../../static/icons/index/jiandujubao.png"></image>
 				</view>
-				<view class="name">管控通知</view>
+				<view class="name">通知公告</view>
 			</view>
 
 			<view class="option" @click="goto('/pages/home/yaoyan/yaoyan')">
 				<view class="icon">
 					<image mode="aspectFit" src="../../static/icons/index/yibaogezhangshouquanchaxun.png"></image>
 				</view>
-				<view class="name">谣言粉碎</view>
+				<view class="name">登记记录</view>
 			</view>
 
 			<view class="option" @click="goto('/pages/home/healthynews/healthynews')">
 				<view class="icon">
 					<image mode="aspectFit" src="../../static/icons/index/xunyiwenzhen.png"></image>
 				</view>
-				<view class="name">抗疫贴士</view>
+				<view class="name">运动贴士</view>
 			</view>
 		</view>
 
