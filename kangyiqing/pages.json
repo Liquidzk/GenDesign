@@ -9,7 +9,7 @@
         {
 		"path": "pages/home/index",
 		"style": {
-			"navigationBarTitleText": "经安通"
+			"navigationBarTitleText": "名字暂定（原疫育码）"
 		}
 	},{
             "path" : "pages/mine/area/search",
@@ -26,7 +26,7 @@
 	{
 		"path": "pages/hbuemap/index",
 		"style": {
-			"navigationBarTitleText": "疫情地图"
+			"navigationBarTitleText": "场馆地图"
 		},
 		"permission": {
 		    "scope.userLocation": {
@@ -38,13 +38,13 @@
 	{
 		"path": "pages/healthy/index",
 		"style": {
-			"navigationBarTitleText": "健康打卡"
+			"navigationBarTitleText": "员工打卡"
 		}
 	},
 	{
 		"path": "pages/home/data/data",
 		"style": {
-			"navigationBarTitleText": "疫情跟踪"
+			"navigationBarTitleText": "足迹"
 		}
 	},{
 		"path": "pages/mine/changepwd",
@@ -175,12 +175,12 @@
 			"selectedIconPath": "static/icons/bar/homeHL.png"
 		},{
 			"pagePath": "pages/hbuemap/index",
-			"text": "疫情地图",
+			"text": "场馆地图",
 			"iconPath": "static/icons/bar/map.png",
 			"selectedIconPath": "static/icons/bar/mapHL.png"
 		},{
 			"pagePath": "pages/healthy/index",
-			"text": "健康打卡",
+			"text": "员工打卡",
 			"iconPath": "static/icons/bar/healthy.png",
 			"selectedIconPath": "static/icons/bar/healthyHL.png"
 		},{
