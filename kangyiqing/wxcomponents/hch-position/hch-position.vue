@@ -16,7 +16,7 @@
 					</cover-view>
 				</cover-view>
 			</view>
-			<cover-view class="near-num">距离最近的疑似患者{{distanceL}}千米</cover-view>
+			<cover-view class="near-num">距离最近的场馆入口{{distanceL}}千米</cover-view>
 			<cover-image class="address-icon" src="../../static/hch-position/定位.png"></cover-image>
         </view>
     </view>

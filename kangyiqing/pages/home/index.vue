@@ -15,7 +15,7 @@
 			<view class="icon">
 				<image mode="aspectFit" src="../../static/index/banner1.jpg"></image>
 			</view>
-			<view class="text">经安通助力疫情防控,践行科技工作者使命担当，抗疫复学专线</view>
+			<view class="text">疫育码助力疫情防控,践行科技工作者使命担当，抗疫复学专线</view>
 		</view>
 		<view class="fast">
 			<view class="item" @click="goto('/pages/home/myqrcode/qrcode')">
