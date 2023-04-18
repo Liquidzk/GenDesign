@@ -6,6 +6,7 @@
 
 <script>
 import hchPosition from "../../wxcomponents/hch-position/hch-position"
+
 export default {
     data() {
         return {
