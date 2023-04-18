@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App'
-
+import axios from 'axios'
 
 import store from './store'
 import cuCustom from './colorui/components/cu-custom.vue';
