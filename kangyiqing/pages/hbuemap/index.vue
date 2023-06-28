@@ -1,6 +1,7 @@
 <template>
   <div>
-    <button @click="toggleSetting">{{ settingEnabled ? '关闭LED' : '打开LED' }}</button>
+    <image src="../../static/index/map.jpg" style="height: 115vh;"></image>
+	<image src="../../static/index/position.png" style="height: 8vh; width: 20vw; bottom: 34vh; left: 15vw;"></image>
   </div>
 </template>
 
@@ -18,19 +19,19 @@ export default {
 
       const url = this.settingEnabled ? 'http://192.168.31.104/led/on' : 'http://192.168.31.104/led/off';
       this.sendToServer(url);
-    },
-    sendToServer(url) {
-          
-		  axios.get(url)
-            .then(response => {
-              console.log('ready');
-			 // 处理响应
-            })
-            .catch(error => {
-              console.log('error');
-			  // 处理错误
-            });
-        }
-  }
+		},
+		sendToServer(url) {
+			  
+			  axios.get(url)
+				.then(response => {
+				  console.log('ready');
+				 // 处理响应
+				})
+				.catch(error => {
+				  console.log('error');
+				  // 处理错误
+				});
+			}
+	  }
 }
 </script>
