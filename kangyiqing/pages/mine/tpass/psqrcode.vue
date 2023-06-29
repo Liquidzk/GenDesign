@@ -3,8 +3,9 @@
 		<view class="flex padding-top-xl justify-center flex-direction align-center">
 			<view class="text-gray">可以将以下二维码保存至本地</view>
 			<view class="padding-top-xl">
-				<tki-qrcode cid="qrcode2" ref="qrcode2" :val="val" :background="background" :foreground="aforeground" :pdground="pdground" :size="400" :onval="true" :loadMake="true" :usingComponents="true" @result="qrR" />
-			</view>
+				<image src="../../../static/index/qrcode.png" style="width: 60vw; height: 60vw;"></image>
+<!-- 				<tki-qrcode cid="qrcode2" ref="qrcode2" :val="val" :background="background" :foreground="aforeground" :pdground="pdground" :size="400" :onval="true" :loadMake="true" :usingComponents="true" @result="qrR" />
+ -->			</view>
 			<view class="padding-top-xl">
 				<button class="cu-btn bg-brown" @tap="saveQr">保存本地</button>
 			</view>

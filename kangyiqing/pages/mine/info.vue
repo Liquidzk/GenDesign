@@ -10,16 +10,7 @@
           		</view>
           	</view>
           </view>
-          <view class="cmd-cell-item">
-          	<view class="cmd-cell-item-body">
-          		<view class="cmd-cell-item-content">
-          			<view class="cmd-cell-item-title">门牌号</view>
-          		</view>
-          		<view class="cmd-cell-item-right">
-          			<text>{{userinfo.accountNum}}</text>
-          		</view>
-          	</view>
-          </view>
+          
           <view class="cmd-cell-item">
           	<view class="cmd-cell-item-body">
           		<view class="cmd-cell-item-content">

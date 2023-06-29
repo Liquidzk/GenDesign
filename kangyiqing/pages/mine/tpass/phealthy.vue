@@ -13,37 +13,10 @@
                 	<input :style="{backgroundColor: isCn ? '#EE6A50' : ''}" v-model="idNum" placeholder="请输入证件号码" type="text" />
                 </view>
 			</view>	
-			<view class="list">
-				<view class="list-title">健康状况</view>
-				<view class="divider"></view>
-				<view class="list-item">
-					<text>是否接触过疑似人员：</text>
-					<radio-group @change="contactLikeChange">
-						<label>
-							<radio value="1" /><text>是</text>
-							<radio value="0" /><text>否</text>
-						</label>
-					</radio-group>
-				</view>
-                <view class="list-item">
-                	<text>是否接种过疫苗：</text>
-                	<radio-group @change="qrvaccineChange">
-                		<label>
-                			<radio value="0" /><text>未接种</text>
-                			<radio value="1" /><text>一次</text>
-                            <radio value="2" /><text>两次</text>
-                		</label>
-                	</radio-group>
-                </view>
-				<view class="divider"></view>
-				<view class="list-item">
-					<text>体温：</text>
-					<slider value="36.5" @change="temperatureChange" min="35" step="0.1" max="40" show-value />
-				</view>
-				<button @click="submit">提交信息</button>
-			</view>
 			
+			<button @click="submit">提交信息</button>
 		</view>
+			
 </template>
 
 <script>

@@ -113,7 +113,7 @@
     {
     	"path": "pages/mine/tpass/psqrcode",
     	"style": {
-    		"navigationBarTitleText": "临时通行证二维码"
+    		"navigationBarTitleText": "通行证二维码"
     	}
     },
     {
