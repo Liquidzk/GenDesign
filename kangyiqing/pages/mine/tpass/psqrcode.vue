@@ -17,33 +17,24 @@
 	import tkiQrcode from '@/components/tki-qrcode/tki-qrcode.vue'
 	export default {
 		data() {
-			return {
-				src: '', // 二维码生成后的图片地址或base64
-				aforeground: '#000000', // 前景色
-				pdground: '#309286', // 角标色
-				background:'#ffffff',
-				val:''
-			}
+			    return {
+			      sign: null
+			    };
 		},
-		components: {tkiQrcode},
-		onLoad(e) {
-			// this.$refs.qrcode._makeCode()
-			this.options = JSON.parse(decodeURIComponent(e.detailDate));
-            this.val = this.options.phone;
-            if(this.options.vaccine == 2){
-                this.aforeground = '#fff000';
-            }else if(this.options.vaccine == 1){
-                this.aforeground = '#00ff00';
-            }else{
-                this.aforeground = '#000000'
-            };
-			// this.val = "http://192.168.101.5:8082/jat/api/queryuser?phone="+uphone;
+		created() {
+		    // 组件创建时启动定时器
+		    this.timer = setInterval(this.fetchData, 1000);
 		},
+		watch: {
+		    sign(newValue) {
+		      if (newValue.includes('1')) {
+		        alert('认证成功，允许进入！');
+		      }
+		    }
+		},
+		
 		methods: {
-			qrR(res) {
-				this.src = res
-				
-			},
+			
 			saveQr(){
 				uni.saveImageToPhotosAlbum({
 					filePath:this.src,
@@ -55,6 +46,21 @@
 						})
 					}
 				})
+			},
+			destroyed() {
+			    // 组件销毁时清除定时器
+			    clearInterval(this.timer);
+			},
+			fetchData() {
+			      this.loading = true;
+			      fetch('http://192.168.31.104/qrcode/result')
+			        .then(response => response.text()).then(
+					data => {
+						this.sign = data;
+					})
+			        .catch(error => {
+			          console.error(error);
+			        });
 			},
             getQrPass(){
                 

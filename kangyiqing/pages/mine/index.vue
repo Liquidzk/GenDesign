@@ -20,7 +20,7 @@
       <cmd-cell-item title="出入管理"slot-left arrow @click="goinfo('area/index')">
         <cmd-icon type="alert-circle" size="24" color="#368dff"></cmd-icon>
       </cmd-cell-item>
-      <cmd-cell-item title="通行证申请"slot-left arrow @click="goinfo('tpass/psqrcode')">
+      <cmd-cell-item title="入馆二维码"slot-left arrow @click="goinfo('tpass/psqrcode')">
         <cmd-icon type="share" size="24" color="#368dff"></cmd-icon>
       </cmd-cell-item>
     </view>
