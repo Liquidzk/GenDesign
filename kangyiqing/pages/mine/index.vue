@@ -11,8 +11,8 @@
       <cmd-cell-item title="个人信息" slot-left arrow @click="goinfo('info')">
         <cmd-icon type="bullet-list" size="24" color="#368dff"></cmd-icon>
       </cmd-cell-item>
-      <cmd-cell-item title="匿名举报" slot-left arrow @click="goinfo('jubao')">
-        <cmd-icon type="message" size="24" color="#368dff"></cmd-icon>
+      <cmd-cell-item title="人脸录入" slot-left arrow @click="goinfo('jubao')">
+        <cmd-icon type="video" size="24" color="#368dff"></cmd-icon>
       </cmd-cell-item>
       <cmd-cell-item title="修改密码" slot-left arrow  @click="goinfo('changepwd')">
         <cmd-icon type="settings" size="24" color="#368dff"></cmd-icon>
