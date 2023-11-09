@@ -101,7 +101,7 @@
 	{
 		"path": "pages/mine/jubao",
 		"style": {
-			"navigationBarTitleText": "匿名举报"
+			"navigationBarTitleText": "人脸录入"
 		}
 	},
     {

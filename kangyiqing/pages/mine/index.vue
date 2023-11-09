@@ -1,3 +1,4 @@
+<!-- 所有标题的文字信息 -->
 <template>
   <view>
     <view class="person-head">
@@ -12,7 +13,7 @@
         <cmd-icon type="bullet-list" size="24" color="#368dff"></cmd-icon>
       </cmd-cell-item>
       <cmd-cell-item title="人脸录入" slot-left arrow @click="goinfo('jubao')">
-        <cmd-icon type="video" size="24" color="#368dff"></cmd-icon>
+        <cmd-icon type="message" size="24" color="#368dff"></cmd-icon>
       </cmd-cell-item>
       <cmd-cell-item title="修改密码" slot-left arrow  @click="goinfo('changepwd')">
         <cmd-icon type="settings" size="24" color="#368dff"></cmd-icon>
@@ -20,7 +21,7 @@
       <cmd-cell-item title="出入管理"slot-left arrow @click="goinfo('area/index')">
         <cmd-icon type="alert-circle" size="24" color="#368dff"></cmd-icon>
       </cmd-cell-item>
-      <cmd-cell-item title="入馆二维码"slot-left arrow @click="goinfo('tpass/psqrcode')">
+      <cmd-cell-item title="通行证申请"slot-left arrow @click="goinfo('tpass/psqrcode')">
         <cmd-icon type="share" size="24" color="#368dff"></cmd-icon>
       </cmd-cell-item>
     </view>
