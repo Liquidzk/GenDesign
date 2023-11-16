@@ -1,7 +1,8 @@
 <template>
   <view class="content">
-    <button class="snap-button" @click="snapPhoto">Snap a Photo</button>
-    <image v-if="imageBase64" :src="imageBase64" class="photo-preview" />
+    <image :src="photoPath" v-if="photoPath" class="photo" />
+    <button @click="takePhoto">拍照</button>
+    <button @click="uploadPhoto">上传照片</button>
   </view>
 </template>
 
@@ -9,54 +10,53 @@
 export default {
   data() {
     return {
-      imageBase64: ''
+      photoPath: ''
     }
   },
   methods: {
-    snapPhoto() {
+    takePhoto() {
       const self = this;
       uni.chooseImage({
-        count: 1,
-        sourceType: ['camera'],
+        count: 1, // 默认9
+        sourceType: ['camera'], // 可以指定来源是相册还是相机
         success: function (res) {
-          const tempFilePaths = res.tempFilePaths;
-          uni.getFileSystemManager().readFile({
-            filePath: tempFilePaths[0],
-            encoding: 'base64',
-            success: res => {
-              self.imageBase64 = 'data:image/jpeg;base64,' + res.data;
-              self.uploadPhoto();
-            }
-          });
+          self.photoPath = res.tempFilePaths[0];
         }
       });
     },
     uploadPhoto() {
-      var uphone = uni.getStorageSync("phone");
-      this.$http.post('http://localhost:8080/api/face', { image: this.imageBase64 , phone: uphone})
-        .then(response => {
-          console.log(response);
-        })
-        .catch(error => {
-          console.error(error);
-        });
+      const self = this;
+      uni.uploadFile({
+        url: 'http://raspberry.pi.ip.address/upload', // 你的树莓派服务器地址
+        filePath: self.photoPath,
+        name: 'file',
+        formData: {
+          'user': 'test'
+        },
+        success: (uploadFileRes) => {
+          console.log(uploadFileRes);
+          uni.showToast({
+            title: '上传成功',
+            duration: 2000
+          });
+        }
+      });
     }
   }
 }
 </script>
 
-<style>
+<style scoped>
 .content {
-  padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  height: 100%;
 }
-.snap-button {
+.photo {
+  width: 300px;
+  height: 300px;
   margin-bottom: 20px;
-}
-.photo-preview {
-  width: 200px;
-  height: 200px;
 }
 </style>
