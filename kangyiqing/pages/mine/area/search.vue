@@ -80,7 +80,7 @@
 				    column: "name,phone,createTime,healthy,areaId" //需要的字段名
 				}; 
 				uni.request({
-				    url: "http://localhost:8082/jat/api/getaccessbyphone?phone="+text,
+				    url: "http://192.168.31.188:8082/jat/api/getaccessbyphone?phone="+text,
 				    data: data,
 				    success: (data) => {
 				        if (data.statusCode == 200) {
@@ -98,7 +98,7 @@
 			    var newItems = [];
 			    items.forEach((e) => {
 					uni.request({
-						url: "http://localhost:8082/jat/api/getareabyid?areaId="+e.areaId,
+						url: "http://192.168.31.188:8082/jat/api/getareabyid?areaId="+e.areaId,
 						success: (res) => {
 						var areaName = res.data.area.areaName;
 						newItems.push({

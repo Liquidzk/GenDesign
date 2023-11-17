@@ -108,7 +108,7 @@
         var that = this;
         console.log(that.phoneNumber);
         uni.request({
-          url: "http://localhost:8082/jat/api/sendSms", 
+          url: "http://192.168.31.188:8082/jat/api/sendSms", 
           //url: 'http://192.168.31.225:8082/jat/api/sendSms',
           method:'POST',
           dataType:'json',
@@ -171,7 +171,7 @@
           return;
         }
         uni.request({
-          url: 'http://localhost:8082/jat/api/adduser',
+          url: 'http://192.168.31.188:8082/jat/api/adduser',
           data: {
             phoneNumber: this.phoneNumber,
             password: this.password,

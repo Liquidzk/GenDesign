@@ -43,7 +43,7 @@
         			        column: "title,mtime,infoSource,summary" //需要的字段名
         			    }; 
         			    uni.request({
-        			        url: 'http://localhost:8082/jat/api/listmessage',
+        			        url: 'http://192.168.31.188:8082/jat/api/listmessage',
         			        data: data,
         			        success: (data) => {
         			            if (data.statusCode == 200) {

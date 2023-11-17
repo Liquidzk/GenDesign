@@ -108,7 +108,7 @@
 				var areaId = userinfo.areaId;
 				console.log(areaId);
 				uni.request({
-					url: "http://localhost:8082/jat/api/getareabyid?areaId="+areaId,
+					url: "http://192.168.31.188:8082/jat/api/getareabyid?areaId="+areaId,
 							success: (res) => {
 								this.area = res.data.area;
 								console.log(this.area)
@@ -138,7 +138,7 @@
 				var userinfo = uni.getStorageSync("userInfo");
 				var areaId = userinfo.areaId;
 				uni.request({
-					url: "http://localhost:8082/jat/api/getaccesscount?areaId="+areaId,
+					url: "http://192.168.31.188:8082/jat/api/getaccesscount?areaId="+areaId,
 							success: (res) => {
 								this.count = res.data.success;
 								console.log(this.count)
@@ -153,7 +153,7 @@
 			        column: "name,phone,createTime,healthy" //需要的字段名
 			    }; 
 			    uni.request({
-			        url: 'http://localhost:8082/jat/api/getaccess?areaId='+areaId,
+			        url: 'http://192.168.31.188:8082/jat/api/getaccess?areaId='+areaId,
 			        data: data,
 			        success: (data) => {
 			            if (data.statusCode == 200) {

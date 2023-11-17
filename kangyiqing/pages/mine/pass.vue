@@ -31,7 +31,7 @@
                 var uid = userinfo.id;
                  var uid = 10;
 			      uni.request({
-			          url: "http://localhost:8082/jat/api/queryPass?uid=" + uid,
+			          url: "http://192.168.31.188:8082/jat/api/queryPass?uid=" + uid,
                       data: data,
 			          success: (data) => {
                           console.log(data.data.passList)

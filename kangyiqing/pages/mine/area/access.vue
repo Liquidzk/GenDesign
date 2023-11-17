@@ -46,7 +46,7 @@
 			   console.log(aphone);
 			   // this.getUserinfo(aphone);
 			   uni.request({
-			   	url: "http://localhost:8082/jat/api/queryuser?phone="+aphone,
+			   	url: "http://192.168.31.188:8082/jat/api/queryuser?phone="+aphone,
 			   						success: (res) => {
 			   							var userinfo = res.data.user;
 			   							var uname = userinfo.name;
@@ -73,7 +73,7 @@
 				var areaId = userinfo.areaId;
 				console.log(areaId);
 				uni.request({
-					url:'http://localhost:8082/jat/api/addaccess',
+					url:'http://192.168.31.188:8082/jat/api/addaccess',
 					data: {
 						areaId: areaId,
 						name: that.name,

@@ -109,7 +109,7 @@
 				}
 				const _this = this
 				uni.request({
-					url:'http://localhost:8082/jat/api/getpatientcount',
+					url:'http://192.168.31.188:8082/jat/api/getpatientcount',
 					method: 'GET',
 					data: data,
 					success:function(res){
@@ -127,7 +127,7 @@
 				}
 				const _this = this
 				uni.request({
-					url:'http://localhost:8082/jat/api/getpatientcountbystatus',
+					url:'http://192.168.31.188:8082/jat/api/getpatientcountbystatus',
 					method: 'GET',
 					data: data,
 					success:function(resp){

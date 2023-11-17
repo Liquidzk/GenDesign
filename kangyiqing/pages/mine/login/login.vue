@@ -58,7 +58,7 @@
           return;
         }
         uni.request({
-          url: 'http://localhost:8082/jat/api/login',
+          url: 'http://192.168.31.188:8082/jat/api/login',
           //url: 'http://172.20.10.2:8082/jat/api/login',
           data: {
             phone: this.phone,

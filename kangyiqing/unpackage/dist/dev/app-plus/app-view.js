@@ -8231,22 +8231,10 @@ var render = function () {
             attrs: { src: _vm._$g(1, "a-src"), _i: 1 },
           })
         : _vm._e(),
-      _vm._$g(2, "i")
-        ? _c("v-uni-input", {
-            attrs: { placeholder: "输入文件名", _i: 2 },
-            model: {
-              value: _vm._$g(2, "v-model"),
-              callback: function ($$v) {
-                _vm.$handleVModelEvent(2, $$v)
-              },
-              expression: "filename",
-            },
-          })
-        : _vm._e(),
       _c(
         "v-uni-button",
         {
-          attrs: { _i: 3 },
+          attrs: { _i: 2 },
           on: {
             click: function ($event) {
               return _vm.$handleViewEvent($event)
@@ -8255,11 +8243,11 @@ var render = function () {
         },
         [_vm._v("拍照")]
       ),
-      _vm._$g(4, "i")
+      _vm._$g(3, "i")
         ? _c(
             "v-uni-button",
             {
-              attrs: { _i: 4 },
+              attrs: { _i: 3 },
               on: {
                 click: function ($event) {
                   return _vm.$handleViewEvent($event)

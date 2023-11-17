@@ -71,7 +71,7 @@ export default {
 			var uid = userinfo.id;
             console.log(uid);
 			uni.request({
-				url: 'http://localhost:8082/jat/api/addPass',
+				url: 'http://192.168.31.188:8082/jat/api/addPass',
 				data:{
 					uid: uid,
 					name: that.name,

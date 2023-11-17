@@ -54,7 +54,7 @@
                 var phone = this.val;
                 console.log(phone)
                 uni.request({
-                	url: "http://localhost:8082/jat/api/qrVaccine?phone="+phone,
+                	url: "http://192.168.31.188:8082/jat/api/qrVaccine?phone="+phone,
                     method: 'POST',
                 			success: (res) => {
                                 console.log(res.data.qrVaccine);

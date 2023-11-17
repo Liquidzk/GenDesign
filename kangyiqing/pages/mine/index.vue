@@ -84,7 +84,7 @@ import {
 		  var uphone = uni.getStorageSync("phone");
 		  console.log(uphone)
 		  uni.request({
-		  	url: "http://localhost:8082/jat/api/queryuser?phone="+uphone,
+		  	url: "http://192.168.31.188:8082/jat/api/queryuser?phone="+uphone,
 			success: (res) => {
 				this.userinfo = res.data.user;
 				console.log(res.data.user);

@@ -35,7 +35,7 @@
 				var that = this;
 				var uphone = uni.getStorageSync("phone");
 				uni.request({
-					url:'http://localhost:8082/jat/api/changepwd',
+					url:'http://192.168.31.188:8082/jat/api/changepwd',
 					data: {
 						phone: uphone,
 						passwd: that.passwd,

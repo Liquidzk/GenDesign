@@ -108,7 +108,7 @@
 			var that = this;
 			// console.log(User)
 			uni.request({
-				url:"http://localhost:8082/jat/api/adduser",
+				url:"http://192.168.31.188:8082/jat/api/adduser",
 				method:'POST',
 				dataType:'json',
 				data:{

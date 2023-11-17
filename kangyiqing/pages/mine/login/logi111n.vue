@@ -87,7 +87,7 @@
 		        }
 				var that = this;
 			    uni.request({
-					url:"http://localhost:8082/jat/api/login",
+					url:"http://192.168.31.188:8082/jat/api/login",
 					method:'POST',
 					data:{
 						phone: that.phoneData,
