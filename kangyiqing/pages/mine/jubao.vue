@@ -1,7 +1,13 @@
 <template>
   <view class="content">
-    <image :src="photoPath" v-if="photoPath" class="photo" />
+	  <canvas id = "myCanvas">
+		  <view id="tips">
+			  拍照以录入面部信息
+		  </view>
+		  <image :src="photoPath" v-if="photoPath" class="photo" />
+	  </canvas>
     <button @click="takePhoto">拍照</button>
+	<view id = "space"></view>
     <button @click="uploadPhoto" v-if="photoPath">上传照片</button>
   </view>
 </template>
@@ -74,5 +80,29 @@ export default {
   width: 300px;
   height: 300px;
   margin-bottom: 20px;
+}
+#myCanvas{
+	width: 270px;
+	height: 270px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-color: lightgray;
+	border-width: 4px;
+	background-color: lightgray;
+	align-content: center;
+}
+#space{
+	height: 20px;
+}
+#tips{
+	text-align: center;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 40%;
+	font-size: 20px;
+	font-weight: 400;
+	color: rgb(76, 76, 76);
 }
 </style>
