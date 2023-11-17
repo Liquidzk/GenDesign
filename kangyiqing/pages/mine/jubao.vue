@@ -1,10 +1,11 @@
 <template>
   <view class="content">
 	  <canvas id = "myCanvas">
-		  <view id="tips">
-			  拍照以录入面部信息
-		  </view>
+		  
 		  <image :src="photoPath" v-if="photoPath" class="photo" />
+			<view id="tips" v-if="!photoPath">
+						  拍照以录入面部信息
+			</view>
 	  </canvas>
     <button @click="takePhoto">拍照</button>
 	<view id = "space"></view>
