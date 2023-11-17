@@ -1,8 +1,9 @@
 <template>
   <view class="content">
     <image :src="photoPath" v-if="photoPath" class="photo" />
+    <input v-model="filename" placeholder="输入文件名" v-if="photoPath" />
     <button @click="takePhoto">拍照</button>
-    <button @click="uploadPhoto">上传照片</button>
+    <button @click="uploadPhoto" v-if="photoPath">上传照片</button>
   </view>
 </template>
 
@@ -10,7 +11,8 @@
 export default {
   data() {
     return {
-      photoPath: ''
+      photoPath: '',
+      filename: '' // 新增一个数据属性来存储文件名
     }
   },
   methods: {
@@ -26,12 +28,20 @@ export default {
     },
     uploadPhoto() {
       const self = this;
+      if (!self.filename) {
+        uni.showToast({
+          title: '请先输入文件名',
+          icon: 'none'
+        });
+        return;
+      }
       uni.uploadFile({
-        url: 'http://raspberry.pi.ip.address/upload', // 你的树莓派服务器地址
+        url: 'http://192.168.31.104:5000/upload', // 你的树莓派服务器地址
         filePath: self.photoPath,
         name: 'file',
         formData: {
-          'user': 'test'
+          'user': 'test',
+          'filename': `${self.filename}.jpg` // 使用输入的文件名
         },
         success: (uploadFileRes) => {
           console.log(uploadFileRes);
