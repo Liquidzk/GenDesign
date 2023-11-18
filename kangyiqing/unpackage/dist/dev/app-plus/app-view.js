@@ -2683,11 +2683,16 @@ var render = function () {
         touchmove: function ($event) {
           return _vm.$handleViewEvent($event)
         },
+        click: function ($event) {
+          return _vm.$handleViewEvent($event)
+        },
       },
     },
     _vm._l(_vm._$g(1, "f"), function (image, index, $20, $30) {
       return _c("img", {
         key: image,
+        ref: _vm._$g("1-" + $30, "ref"),
+        refInFor: true,
         class: _vm._$g("1-" + $30, "c"),
         style: _vm._$g("1-" + $30, "s"),
         attrs: { src: _vm._$g("1-" + $30, "a-src"), _i: "1-" + $30 },
@@ -2790,7 +2795,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ./node_modules/css-loader/dist/runtime/api.js */ 10);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\n.image-stack {\n  position: relative;\n}\n.image-stack img {\n  -webkit-transform-origin: center center;\n          transform-origin: center center;\n  position: absolute;\n  width: 780px; /* 根据需要设置宽度 */\n  height: 960px; /* 根据需要设置高度 */\n}\n.image-0 {\n  z-index: 1;\n}\n.image-1 {\n  z-index: 2;\n}\n.image-2{\n  z-index: 3;\n}\n.image-3{\n  z-index: 4;\n}\n.image-4{\n  z-index: 5;\n}\n.image-5{\n  z-index: 6;\n}\n.image-6{\n  z-index: 7;\n}\n.image-7{\n  z-index: 8;\n}\n", ""]);
+exports.push([module.i, "\n.image-stack {\n  position: relative;\n}\n.image-stack img {\n  -webkit-transform-origin: center center;\n          transform-origin: center center;\n  position: absolute;\n  width: 390px; /* 根据需要设置宽度 */\n  height: 480px; /* 根据需要设置高度 */\n}\n.image-0 {\n  z-index: 1;\n}\n.image-1 {\n  z-index: 2;\n}\n.image-2{\n  z-index: 3;\n}\n.image-3{\n  z-index: 4;\n}\n.image-4{\n  z-index: 5;\n}\n.image-5{\n  z-index: 6;\n}\n.image-6{\n  z-index: 7;\n}\n.image-7{\n  z-index: 8;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
