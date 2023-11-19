@@ -1,12 +1,25 @@
 <template>
-  <div class="image-stack" ref="imageStack" @touchstart="handleTouchStart" @touchmove="handleTouchMove" @click = "handleImageClick">
-    <img v-for="(image, index) in imageList" 
-	:src="image.src" 
-	:key="index" 
-	:class="'image-' + index"
-	:ref="'image' + index"
-	:style="{ transform: 'scale(' + scale + ') translate(' + translateX + 'px, ' + translateY + 'px)' }"
-	>
+	<div>
+		<view v-if="showModal" 
+		style="text-align: center; background-color: beige; transform: translate(0,150);">
+			<text style="font-size: 20px;">选择预约日期</text>
+			
+			<uni-calendar
+			@change="onTimeChange">
+				
+			</uni-calendar>
+			
+		</view>
+	    <div class="image-stack" ref="imageStack" @touchstart="handleTouchStart" @touchmove="handleTouchMove" @click = "handleImageClick">
+			<img v-for="(image, index) in imageList" 
+			:src="image.src" 
+			:key="index" 
+			:class="'image-' + index"
+			:ref="'image' + index"
+			:style="{ transform: 'scale(' + scale + ') translate(' + translateX + 'px, ' + translateY + 'px)' }"
+			>
+	    </div>
+		
   </div>
 </template>
 
@@ -28,6 +41,11 @@ export default {
 		offsetY: 0,
 		windowX: 0,
 		windowY: 0,
+		time: '',
+		showDatePicker: false,
+		selectedTime: '',
+		showModal: false,
+		part:'',
       imageList: [
         { src: './static/index/map.png', id:'image1' , x: 0, y: 0},
 		{ src:'./static/index/室内体育馆.png',id:'image2', x: 765, y: 2640},
@@ -53,7 +71,16 @@ export default {
 	  
   },
   methods: {
-	
+	onTimeChange(event){
+		this.time = event.fulldate;
+		console.log("选择的时间:" + event.fulldate);
+		this.showModal = false;
+		uni.showToast({
+			title:this.part,
+			icon:'success',
+			duration:1000,
+		});	
+	},
 	  handleTouchStart(event) {
 		  //滑动功能
 		  const touch = event.touches[0];
@@ -100,13 +127,11 @@ export default {
 	        const dy = touch1.clientY - touch2.clientY;
 	        return Math.sqrt(dx * dx + dy * dy);
 	      },
-			  
 		  getDistance(x1,y1,x2,y2){
 			  const dx = x2-x1;
 			  const dy = y2-y1;
 			  return Math.sqrt(dx * dx + dy * dy);
 		  },
-		  
 	  handleAnyImageClick(index){
 		  const image = this.imageList[index];
 		  
@@ -139,12 +164,40 @@ export default {
 		  	break;
 		  }
 	  },
+	  showModalFunc(){
+		  this.showModal = true;
+	  },
+	  onConfirm() {
+	        this.showModal = false;
+	        console.log('用户点击确定');
+	        // 在这里执行确定按钮被点击后的操作
+	  },
+	  onCancel() {
+	        this.showModal = false;
+	  },
+	  onDatePickerConfirm(value) {
+	    
+		console.log(value);
+	    this.selectedTime = value;
+		
+        this.showDatePicker = false;
+	        // 在这里执行日期选择器确定按钮被点击后的操作
+      },
+	  onDatePickerCancel() {
+	        this.showDatePicker = false;
+	  },
+	  showDatePickerFunc() {
+	        this.showDatePicker = true;
+	  },
 	  handleImageClick(event) {
+		  this.showModalFunc();
+		  
 		  var actrualX; var actrualY;
 		  var clickX = event.detail.x;// 获取点击的横坐标
 		  var clickY = event.detail.y; // 获取点击的纵坐标
-		  actrualX=clickX+this.offsetX*this.scale;
-		  actrualY=clickY+this.offsetY*this.scale;
+		  actrualX=clickX-this.translateX*this.scale;
+		  actrualY=clickY-this.translateY*this.scale;
+		  
 		  
 		  var multiplier = 2600 / 400;
 		  
@@ -166,58 +219,41 @@ export default {
 		        }
 				console.log(this.scale);
 				console.log(this.translateX+','+this.translateY);
+				console.log(actrualX+','+actrualY);
 		        // 执行最近点对应的函数
 		        if (nearestPoint && nearestPoint.callback) {
 		          nearestPoint.callback();
 		    }
 	  },
+	  modal(message){
+		  this.showModal = true;
+		  this.part=message;
+		  
+	  }
+	  ,
       handleImage1Click() {
 		  
       },
       handleImage2Click() {
-		uni.showToast({
-    				title:'室内体育馆',
-    				icon: 'success',
-    				duration:1000
-    			});  },
+		  this.modal('已预约室内体育馆');
+	  },
       handleImage3Click() {
-		  uni.showToast({
-		  			title:'五人足球场',
-		  			icon: 'success',
-		  			duration:1000
-		  		});
+		  this.modal('已预约五人足球场');
       },
 	  handleImage4Click() {
-		  uni.showToast({
-		  title:'篮球场',
-		  	icon: 'success',
-		  	duration:1000
-		  });  
+		  this.modal('已预约篮球场');
 	  },
 	  handleImage5Click() {
-		  uni.showToast({
-		  title:'主足球场',
-		  	icon: 'success',
-		  	duration:1000
-		  });  },
+		  this.modal('已预约主足球场');
+		  },
 	  handleImage6Click() {
-		  uni.showToast({
-		  title:'板式网球场',
-		  	icon: 'success',
-		  	duration:1000
-		  });  },
+		  this.modal('已预约板式网球场');
+		  },
 	  handleImage7Click() {
-		  uni.showToast({
-		  title:'网球场',
-		  	icon: 'success',
-		  	duration:1000
-		  });  },
+		  this.modal('已预约网球场');
+			},
 	  handleImage8Click() {
-		  uni.showToast({
-		  title:'游泳馆',
-		  	icon: 'success',
-		  	duration:1000
-		  });
+		  this.modal('已预约游泳馆');
 	  }
     }
 };
